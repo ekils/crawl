@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>COIN</title>
+        <!--<LINK REL="SHORTCUT ICON" HREF="https://vignette.wikia.nocookie.net/pokemonhda/images/d/d2/By%3BSophiieTutoriiales_%285%29.ico">-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        <!-- Add your site or application content here -->
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="js/vendor/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <!--<script src="js/main.js"></script>-->
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="js/vendor/analytics.js" async defer></script>
+
+
+
+
+
+
+
+
+
+
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+
+
+
+        <!-------JavaScript顯示滑鼠所在座標 START-------->
+        <script language="JavaScript1.2">
+        <!--
+
+        // Detect if the browser is IE or not.
+        // If it is not IE, we assume that the browser is NS.
+        var IE = document.all?true:false;
+
+        // If NS -- that is, !IE -- then set up for mouse capture
+        if (!IE) document.captureEvents(Event.MOUSEMOVE);
+
+        // Set-up to use getMouseXY function onMouseMove
+        document.onmousemove = getMouseXY;
+
+        // Temporary variables to hold mouse x-y pos.s
+        var tempX = 0;
+        var tempY = 0;
+
+        // Main function to retrieve mouse x-y pos.s
+
+        function getMouseXY(e) {
+          if (IE) { // grab the x-y pos.s if browser is IE
+            tempX = event.clientX + document.body.scrollLeft;
+            tempY = event.clientY + document.body.scrollTop
+          } else {  // grab the x-y pos.s if browser is NS
+            tempX = e.pageX;
+            tempY = e.pageY
+          }
+          // catch possible negative values in NS4
+          if (tempX < 0){tempX = 0}
+          if (tempY < 0){tempY = 0}
+          // show the position values in the form named Show
+          // in the text fields named MouseX and MouseY
+          document.Show.MouseX.value = tempX;
+          document.Show.MouseY.value = tempY;
+          return true
+        }
+
+        //-->
+        </script>
+        <form name="Show">
+            <h3><pre><p align="left" style=" border:3px lightblue solid;"> DNA Journey.                <input type="text" name="MouseX" value="0" size="4">X <input type="text" name="MouseY" value="0" size="4">Y </pre></h3></form>
+        <p id="downlog">Cursor Coordinate : </p>
+
+
+        <!-------JavaScript顯示滑鼠所在座標 END-------->
+
+        <!--<pre><span style=" border:10px blueviolet solid;">       DNA Journey.    </span></pre>-->
+        <canvas id="canvas" width = "1000" height = "1000"></canvas>
+        <!--<script src="js/demo.js"></script>-->
+        <script data-main="js/main.js" src="js/require.js"></script>
+
+
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+
+
+
+
+
+
+
+    </body>
+</html>
